@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  ubuntu-server:
+    build:
+      context: ./ubuntu-server
+      dockerfile: Dockerfile
+    volumes:
+      - ./data:/data

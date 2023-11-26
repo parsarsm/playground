@@ -10,5 +10,5 @@ services:
   adminer:
     image: adminer:latest
     restart: always
-    ports:
+    ports:  
       - 8080:8080

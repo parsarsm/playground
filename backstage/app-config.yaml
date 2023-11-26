@@ -28,8 +28,36 @@ backend:
   # This is for local development only, it is not recommended to use this in production
   # The production database configuration is stored in app-config.production.yaml
   database:
-    client: better-sqlite3
-    connection: ':memory:'
+    ## client: better-sqlite3
+    ## connection: ':memory:'
+    # config options: https://node-postgres.com/apis/client
+    client: pg
+    connection:
+      # host: ${POSTGRES_HOST} # todo: use .env later
+      # port: ${POSTGRES_PORT}
+      # user: ${POSTGRES_USER}
+      # password: ${POSTGRES_PASSWORD}
+      host: 127.0.0.1
+      port: 5432
+      user: postgres
+      password: postgres
+      # https://node-postgres.com/features/ssl
+      # ssl:
+      #   host is only needed if the connection name differs from the certificate name.
+      #   This is for example the case with CloudSQL.
+      #   host: servername in the certificate
+      #   ca:
+      #     $file: <file-path>/server.pem
+      #   key:
+      #     $file: <file-path>/client.key
+      #   cert:
+      #     $file: <file-path>/client-cert.pem
+      reading:
+        allow:
+          - host: '*backstage.io'
+
+
+
   # workingDirectory: /tmp # Use this to configure a working directory for the scaffolder, defaults to the OS temp-dir
 
 integrations:
@@ -64,7 +92,12 @@ techdocs:
 
 auth:
   # see https://backstage.io/docs/auth/ to learn about auth providers
-  providers: {}
+  environment: development
+  providers:
+    github:
+      development:
+        clientId: c209b2bfc72ce2332a64
+        clientSecret: 178fb52e86598a31d497d4f69f4bc049bd932eb5
 
 scaffolder:
   # see https://backstage.io/docs/features/software-templates/configuration for software template options

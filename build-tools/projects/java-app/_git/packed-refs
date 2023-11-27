@@ -1,0 +1,3 @@
+# pack-refs with: peeled fully-peeled sorted 
+3eacb179733a4d16e1581c03ef7f804e2be3c4ef refs/remotes/origin/feature/deploy-jar-to-nexus
+f7087013aec2c11b11847ca341371eb667305009 refs/remotes/origin/master

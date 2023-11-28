@@ -37,6 +37,9 @@ import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/
 import { githubAuthApiRef } from '@backstage/core-plugin-api';
 import { SignInPage } from '@backstage/core-components';
 
+import { HomepageCompositionRoot } from '@backstage/plugin-home';
+import { HomePage } from './components/home/HomePage';
+
 const app = createApp({
   apis,
   components: {
@@ -74,7 +77,10 @@ const app = createApp({
 
 const routes = (
   <FlatRoutes>
-    <Route path="/" element={<Navigate to="catalog" />} />
+    {/* <Route path="/" element={<Navigate to="catalog" />} /> */}
+    <Route path="/" element={<HomepageCompositionRoot />}>
+      <HomePage />
+    </Route>
     <Route path="/catalog" element={<CatalogIndexPage />} />
     <Route
       path="/catalog/:namespace/:kind/:name"

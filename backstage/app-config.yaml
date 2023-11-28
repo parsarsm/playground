@@ -18,7 +18,7 @@ backend:
     # Uncomment the following host directive to bind to specific interfaces
     # host: 127.0.0.1
   csp:
-    connect-src: ["'self'", 'http:', 'https:']
+    connect-src: ["'self'", "http:", "https:"]
     # Content-Security-Policy directives follow the Helmet format: https://helmetjs.github.io/#reference
     # Default Helmet Content-Security-Policy values can be removed by setting the key to false
   cors:
@@ -54,9 +54,7 @@ backend:
       #     $file: <file-path>/client-cert.pem
       reading:
         allow:
-          - host: '*backstage.io'
-
-
+          - host: "*backstage.io"
 
   # workingDirectory: /tmp # Use this to configure a working directory for the scaffolder, defaults to the OS temp-dir
 
@@ -72,6 +70,11 @@ integrations:
     #   token: ${GHE_TOKEN}
 
 proxy:
+  endpoints:
+    "/circleci/api":
+      target: https://circleci.com/api/v1.1
+      headers:
+        Circle-Token: ${CIRCLECI_AUTH_TOKEN}
   ### Example for how to add a proxy endpoint for the frontend.
   ### A typical reason to do this is to handle HTTPS and CORS for internal services.
   # endpoints:
@@ -84,11 +87,11 @@ proxy:
 # and an external cloud storage when deploying TechDocs for production use-case.
 # https://backstage.io/docs/features/techdocs/how-to-guides#how-to-migrate-from-techdocs-basic-to-recommended-deployment-approach
 techdocs:
-  builder: 'local' # Alternatives - 'external'
+  builder: "local" # Alternatives - 'external'
   generator:
-    runIn: 'docker' # Alternatives - 'local'
+    runIn: "docker" # Alternatives - 'local'
   publisher:
-    type: 'local' # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
+    type: "local" # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
 
 auth:
   # see https://backstage.io/docs/auth/ to learn about auth providers

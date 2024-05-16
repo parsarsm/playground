@@ -1,0 +1,6 @@
+{
+  "require": {
+    "mikehaertl/php-pdftk": "^0.13.1",
+    "symfony/var-dumper": "^7.0"
+  }
+}

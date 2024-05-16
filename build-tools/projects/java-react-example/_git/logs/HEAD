@@ -1,3 +1,0 @@
-0000000000000000000000000000000000000000 8654c2624fa19b5aac66a32e77c19ee4e11a49b8 moparo <mo.rostami@digikala.com> 1700863816 +0330	clone: from github.com:pmendelski/java-react-example.git
-8654c2624fa19b5aac66a32e77c19ee4e11a49b8 8dc4ccf1449bfd4561dbf6a9100792a0b7efa888 moparo <mo.rostami@digikala.com> 1701068006 +0330	commit: feat: connected to local nexus to upload artifact (gradlew)
-8dc4ccf1449bfd4561dbf6a9100792a0b7efa888 8654c2624fa19b5aac66a32e77c19ee4e11a49b8 moparo <mo.rostami@digikala.com> 1701068110 +0330	reset: moving to 8654c2624fa19b5aac66a32e77c19ee4e11a49b8

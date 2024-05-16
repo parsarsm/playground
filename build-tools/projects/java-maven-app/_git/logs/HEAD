@@ -1,3 +1,0 @@
-0000000000000000000000000000000000000000 92602e6c79f759d8fb3ee82c18b7c3bfc2f7db57 moparo <mo.rostami@digikala.com> 1700808338 +0330	clone: from gitlab.com:nanuchi/java-maven-app.git
-92602e6c79f759d8fb3ee82c18b7c3bfc2f7db57 795eb8d40bc8b6fa10c22d1a007eb7bf55af208f moparo <mo.rostami@digikala.com> 1701067822 +0330	commit: feat: connected to local nexus to upload artifact
-795eb8d40bc8b6fa10c22d1a007eb7bf55af208f 92602e6c79f759d8fb3ee82c18b7c3bfc2f7db57 moparo <mo.rostami@digikala.com> 1701068095 +0330	reset: moving to 92602e6c79f759d8fb3ee82c18b7c3bfc2f7db57
